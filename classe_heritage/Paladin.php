@@ -26,6 +26,7 @@ class Paladin extends Personnage{
     }
 
     //Prend bouclier
+    //pour toi le 20vin c'est loin d'etre fini
     
 
 
