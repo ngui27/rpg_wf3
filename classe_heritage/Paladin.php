@@ -22,7 +22,7 @@ class Paladin extends Personnage{
 
     //definir les attribut d'un paladin
     public function attributPaladin(){
-        $this->pdv *= 1.2;
+        $this->pdv *= 3;
         $this->force *= 1.5 ;
         $this->agile *= 0.5;
         $this->vitesse *= 0.8;

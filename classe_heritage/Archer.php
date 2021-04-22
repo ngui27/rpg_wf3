@@ -19,7 +19,7 @@ class Archer extends Personnage{
     
     //modifier attribue archer
     public function archerAttribue(){
-        $this->pdv *= 0.8;
+        $this->pdv *= 1.5;
         $this->force /= 1.5 ;
         $this->agile *= 1.5;
         $this->vitesse *= 1.3;

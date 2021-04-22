@@ -21,7 +21,7 @@ class Mage extends Personnage{
 
     //attribut mage
     public function mageAttribue(){
-        $this->pdv *= 0.8;
+        $this->pdv *= 1.5;
         $this->force /= 2 ;
         $this->intel *= 2;
     }
