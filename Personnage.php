@@ -1,6 +1,9 @@
 <?php
 require_once "Cheval.php";
 require_once "Guilde.php";
+require_once "classe_heritage/Archer.php";
+require_once "classe_heritage/Paladin.php";
+require_once "classe_heritage/Mage.php";
 
 /**
  * Créez une classe PHP qui représente un personnage de jeu vidéo (type RPG)
@@ -15,13 +18,12 @@ require_once "Guilde.php";
 class Personnage{
 
     public $pseudo;
-    public $pdv;
-    public $force;
-    public $agile;
-    public $intel;
-    public $vitesse;
-    public $magie;
-    public $folie;
+    public $pdv= 1000;
+    public $force= 60;
+    public $agile= 40;
+    public $intel = 60;
+    public $vitesse = 60;
+    // public $folie;
     public $vivant = true;
     public $arme = false;
     public $bouclier = false;
@@ -32,7 +34,7 @@ class Personnage{
 
     public function frapper(Personnage $victime){
        if($victime->vivant){
-        $degats = round(($this->force + $this->agile)/($this->intel/2));
+        $degats = round(($this->force + $this->vitesse)-($this->intel/2));
         $victime->degatsSubie($degats);
         if (!$victime->vivant) {
             echo $this->pseudo." a porter un coup fatal à $victime";
@@ -61,6 +63,27 @@ class Personnage{
         $this->guilde = $guilde;
     }
 }
+
+
+$merlin = new Mage("Merlin");
+$merlin->mageAttribue();
+
+print "<pre>";
+    print_r($merlin);
+print "</pre>";
+
+$robinOfTheHood = new Archer("Robin des bois","Arc");
+
+print "<pre>";
+    print_r($robinOfTheHood);
+print "</pre>";
+
+$arthur = new Paladin("Arthur", "Excalibur", "Hulk");
+print "<pre>";
+    print_r($arthur);
+print "</pre>";
+
+
 
 
 
