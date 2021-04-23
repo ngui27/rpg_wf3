@@ -9,17 +9,28 @@
  * 		- Prendre la fuite (les lâches)
  *      - Chevaucher
  */
+namespace Monture;
 
- class Cheval{
+
+use Monture\MontureTerreste;
+
+ class Cheval extends MontureTerreste{
     public $nomCanason;
-    public $vitesse;
-    public $endurance;
-    public $au_repos = false;
+   
+    public function __construct(string $nomCanason){
+        $this->nomCanason = $nomCanason;
+        $this->attribut();
+    }
+
+    public function attribut(){
+        $this->vitesse *= 1.5;
+        $this->endurance *= 1;
+    }
 
     public function galoper(){
 
         if ($this->endurance <=1) {
-            echo $this->nomCanason. 'est epuisé !!' ;
+            echo $this->nomCanason. ' est epuisé !!' ;
         }else {
 
             echo 'Cours ' .$this->nomCanason.' !';
@@ -28,15 +39,9 @@
             echo $this->nomCanason.'cours a '.$vitesse_reelle. 'km/h !';
         }
         
-        
-        
     }
 
-    public function fuite(){
-        
-        echo $this->nomCanason .' s\'enfuit a tout vitesse only';
-        
-    }
+    
 
     public function chavaucher(){
         $this->au_repos = false;

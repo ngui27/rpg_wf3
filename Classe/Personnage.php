@@ -1,19 +1,14 @@
 <?php
-require_once "Cheval.php";
-require_once "Guilde.php";
-require_once "classe_heritage/Archer.php";
-require_once "classe_heritage/Paladin.php";
-require_once "classe_heritage/Mage.php";
+// require_once "Cheval.php";
+// require_once "Guilde.php";
+// require_once "classe_heritage/Archer.php";
+// require_once "classe_heritage/Paladin.php";
+// require_once "classe_heritage/Mage.php";
 
-/**
- * Créez une classe PHP qui représente un personnage de jeu vidéo (type RPG)
- * Un personnage est caractérisé par un pseudo, des points de vie, sa force 
- * (ainsi que tous les points de caractéristique que vous voudrez)
- * 
- * Les actions d'un personnage consistent en : 
- * 		- Frapper (infliger des dégats à un autre personnage en fonction de sa force)
- * 		- Chevaucher un Cheval (ce qui appelle la méthode chevauche de la classe Cheval)
- */
+
+namespace Classe;
+use Monture\Cheval;
+use Assemblait\Guilde;
 
 class Personnage{
 
@@ -51,10 +46,10 @@ class Personnage{
         }
     }
 
-    public function chavaucher_un_cheval(Cheval $nomCanason){
+    public function chavaucher_un_cheval(Cheval $monture){
 
         echo $this->pseudo. 'chevauche son Canason!!';
-        $nomCanason->chavaucher();
+        $monture->chavaucher();
     
     }
 
@@ -65,23 +60,7 @@ class Personnage{
 }
 
 
-$merlin = new Mage("Merlin");
-$merlin->mageAttribue();
 
-print "<pre>";
-    print_r($merlin);
-print "</pre>";
-
-$robinOfTheHood = new Archer("Robin des bois","Arc");
-
-print "<pre>";
-    print_r($robinOfTheHood);
-print "</pre>";
-
-$arthur = new Paladin("Arthur", "Excalibur", "Hulk");
-print "<pre>";
-    print_r($arthur);
-print "</pre>";
 
 
 

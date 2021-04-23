@@ -7,6 +7,9 @@
  * La seule action qu'une guilde peut "accomplir" c'est accueillir un nouveau joueur
  */
 
+ namespace Assemblait;
+ use Classe\Personnage;
+
  class Guilde{
     public $nom;
     public $membre = array();

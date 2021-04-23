@@ -1,0 +1,12 @@
+<?php
+
+/**
+ * Créez une classe PHP qui représente un soin (générique)
+ * 
+ * Un soin est défini par le nombre de points de vie qu'il peut rendre en une seul utilisation
+ * 
+ * La seule action de cette classe est statique : soigner un personnage
+ * Un soin rend des points de vie (d'un montant défini dans la classe) à un personnage
+ * 
+ * Créez objet de soin 3 soins distincts
+ */

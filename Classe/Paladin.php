@@ -3,6 +3,9 @@
 // require_once "Arme.php";
 
 //definir la class paladin
+namespace Classe;
+
+use Classe\Personnage;
 
 class Paladin extends Personnage{
 

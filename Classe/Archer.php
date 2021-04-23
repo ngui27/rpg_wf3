@@ -1,6 +1,10 @@
 <?php
-// require_once "../Personnage.php";
 
+
+
+namespace Classe;
+
+use Classe\Personnage;
 
 
 class Archer extends Personnage{
